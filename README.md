@@ -25,8 +25,11 @@ Program menyediakan lima fitur utama:
 - **Hapus Satwa** - menghapus data satwa berdasarkan ID.
 - **Lihat Perawatan Satwa** - menampilkan informasi perawatan tiap satwa, memanfaatkan interface.
 
+
 **GAMBAR 1 - Tampilan Menu Utama**
+
 <img width="632" height="392" alt="image" src="https://github.com/user-attachments/assets/19e97bc1-78e2-4a08-8f12-a74bd003f3d3" />
+
 
 ---
 
