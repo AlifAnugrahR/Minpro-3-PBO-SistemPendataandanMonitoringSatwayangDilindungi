@@ -11,7 +11,7 @@
 
 Satwa dilindungi di Indonesia, seperti Orangutan dan Komodo, perlu didata dan dipantau agar keberadaannya tetap terjaga. Pencatatan yang dilakukan secara manual rentan salah atau tercatat ganda. Oleh karena itu, dibuat program sederhana berbasis Java untuk membantu mencatat dan memantau data satwa dilindungi.
 
-Program ini merupakan pengembangan bertahap: dimulai dari Mini Project 1, dikembangkan lagi di Mini Project 2 dengan penerapan encapsulation, inheritance, polymorphism (overriding), ArrayList, dan struktur MVC, dan sekarang dikembangkan lebih lanjut di **Mini Project 3** ini dengan menambahkan **abstraction**, **polymorphism overloading**, dan **interface**
+Program ini merupakan pengembangan bertahap: dimulai dari Mini Project 1, dikembangkan lagi di Mini Project 2 dengan penerapan encapsulation, inheritance, polymorphism (overriding), ArrayList, dan struktur MVC, dan sekarang dikembangkan lebih lanjut di Mini Project 3 ini dengan menambahkan abstraction, polymorphism overloading, dan interface
 
 ## 2. Deskripsi Program
 
@@ -134,25 +134,40 @@ Pengguna memasukkan angka sesuai pilihan menu, lalu `switch` menentukan proses y
 
 ### Alur Tiap Menu
 
-**Menu 1 – Tambah Satwa.** Pengguna memasukkan ID, nama, dan jenis satwa. Program memvalidasi ID tidak boleh sama dan jenis harus Mamalia atau Reptil. Jika Mamalia, pengguna mengisi habitat. Jika Reptil, pengguna menjawab berbisa (ya/tidak). Objek baru ditambahkan ke ArrayList dengan `add()`, lalu info satwa baru ditampilkan sekali lagi lengkap dengan catatan (memanfaatkan overloading, dijelaskan di bagian 7).
+**Menu 1 - Tambah Satwa.** Pengguna memasukkan ID, nama, dan jenis satwa. Program memvalidasi ID tidak boleh sama dan jenis harus Mamalia atau Reptil. Jika Mamalia, pengguna mengisi habitat. Jika Reptil, pengguna menjawab berbisa (ya/tidak). Objek baru ditambahkan ke ArrayList dengan `add()`, lalu info satwa baru ditampilkan sekali lagi lengkap dengan catatan (memanfaatkan overloading, dijelaskan di bagian 7).
 
-**[GAMBAR 3 – Proses Tambah Data]**
+**GAMBAR 3 - Proses Tambah Data**
 
-**Menu 2 – Tampilkan Satwa.** Program mengambil data satu per satu dengan `for-each` dan memanggil `tampilkanInfo()` pada tiap objek. Karena `tampilkanInfo()` adalah abstract method yang di-override tiap subclass, tampilannya otomatis berbeda sesuai jenis satwanya.
+<img width="662" height="197" alt="image" src="https://github.com/user-attachments/assets/36e78c54-8a82-4877-8f85-d86bf0d9799b" />
 
-**[GAMBAR 4 – Tampilan Daftar Satwa]**
 
-**Menu 3 – Update Satwa.** Pengguna memasukkan ID, program mencarinya dengan `for-each`, lalu nama diubah lewat `setNama()`.
+**Menu 2 - Tampilkan Satwa.** Program mengambil data satu per satu dengan `for-each` dan memanggil `tampilkanInfo()` pada tiap objek. Karena `tampilkanInfo()` adalah abstract method yang di-override tiap subclass, tampilannya otomatis berbeda sesuai jenis satwanya.
 
-**[GAMBAR 5 – Proses Update Data]**
+**GAMBAR 4 - Tampilan Daftar Satwa**
 
-**Menu 4 – Hapus Satwa.** Pengguna memasukkan ID, program mencari posisinya dengan `for`, lalu menghapus dengan `remove()`.
+<img width="642" height="637" alt="image" src="https://github.com/user-attachments/assets/ca153160-ff75-4a2f-82a0-f22051858f77" />
 
-**[GAMBAR 6 – Proses Hapus Data]**
 
-**Menu 5 – Lihat Perawatan Satwa** *(fitur baru Mini Project 3)*. Program memeriksa apakah objek satwa mengimplementasikan interface `Perawatan` dengan `instanceof`, lalu menampilkan `jenisPerawatan()` masing-masing. Dijelaskan lebih lanjut di bagian 8.
+**Menu 3 - Update Satwa.** Pengguna memasukkan ID, program mencarinya dengan `for-each`, lalu nama diubah lewat `setNama()`.
 
-**[GAMBAR 7 – Tampilan Menu Lihat Perawatan Satwa]**
+**GAMBAR 5 - Proses Update Data**
+
+<img width="567" height="117" alt="image" src="https://github.com/user-attachments/assets/e2677bdb-d581-4d96-a95e-24e89d5d69d8" />
+
+
+**Menu 4 - Hapus Satwa.** Pengguna memasukkan ID, program mencari posisinya dengan `for`, lalu menghapus dengan `remove()`.
+
+**GAMBAR 6 - Proses Hapus Data**
+
+<img width="535" height="92" alt="image" src="https://github.com/user-attachments/assets/db18f0c3-7d1d-414b-940b-71800db74d0f" />
+
+
+**Menu 5 - Lihat Perawatan Satwa** Program memeriksa apakah objek satwa mengimplementasikan interface `Perawatan` dengan `instanceof`, lalu menampilkan `jenisPerawatan()` masing-masing. Dijelaskan lebih lanjut di bagian 8.
+
+**GAMBAR 7 - Tampilan Menu Lihat Perawatan Satwa**
+
+<img width="633" height="157" alt="image" src="https://github.com/user-attachments/assets/cadc7676-0e16-418b-b07a-d3c95993d60e" />
+
 
 ---
 
@@ -185,7 +200,36 @@ public static int cekId(Scanner input) {
 }
 ```
 
-**[GAMBAR 8 – Contoh Validasi Input Salah]**
+**GAMBAR 8 – Contoh Validasi Input Salah**
+
+**Validasi 1** 
+
+<img width="555" height="57" alt="image" src="https://github.com/user-attachments/assets/02df809f-9eec-4ad4-a863-5cf9285626b4" />
+
+
+**Validasi 2**
+
+<img width="440" height="95" alt="image" src="https://github.com/user-attachments/assets/e8dfa551-4d35-4c76-8867-44b783e14ea2" />
+
+
+**Validasi 3**
+
+<img width="507" height="48" alt="image" src="https://github.com/user-attachments/assets/890ab455-53bf-4663-9fd0-ebda78b2d905" />
+
+
+**Validasi 4**
+
+<img width="577" height="46" alt="image" src="https://github.com/user-attachments/assets/74e275b7-5e00-4efd-9197-afce9b11b7d7" />
+
+**Validasi 5**
+
+<img width="436" height="42" alt="image" src="https://github.com/user-attachments/assets/82265bff-7459-443f-bc66-a1edbf018762" />
+
+
+**Validasi 6**
+
+<img width="470" height="52" alt="image" src="https://github.com/user-attachments/assets/3fd6aea4-062c-40c2-a14a-c6fc494495e2" />
+
 
 ---
 
@@ -193,7 +237,7 @@ public static int cekId(Scanner input) {
 
 ### 6.1 Encapsulation
 
-Seluruh atribut bersifat `private` (atau `protected` untuk atribut yang diwariskan), sehingga hanya bisa diakses lewat getter dan setter.
+Seluruh atribut bersifat private (atau protected untuk atribut yang diwariskan), sehingga hanya bisa diakses lewat getter dan setter.
 
 ```java
 public abstract class Satwa {
@@ -212,14 +256,14 @@ public abstract class Satwa {
 }
 ```
 
-- Atribut `id` bersifat `private final` dan tidak punya setter, karena ID tidak boleh berubah setelah data dibuat.
-- Atribut `nama` dan `jenis` bersifat `protected`, sehingga bisa diakses subclass tetapi tetap tidak bisa diakses sembarangan dari luar.
-- Atribut khusus (`habitat` di `Mamalia`, `berbisa` di `Reptil`) bersifat `private`, diakses lewat getter/setter masing-masing.
-- Saat update data, `SatwaCRUD` memanggil `satwa.setNama(nama)`, bukan mengubah atribut secara langsung.
+- Atribut id bersifat private final dan tidak punya setter, karena ID tidak boleh berubah setelah data dibuat.
+- Atribut nama dan jenis bersifat protected, sehingga bisa diakses subclass tetapi tetap tidak bisa diakses sembarangan dari luar.
+- Atribut khusus (habita di Mamalia, berbisa di Reptil) bersifat private, diakses lewat getter/setter masing-masing.
+- Saat update data, SatwaCRUD memanggil satwa.setNama(nama), bukan mengubah atribut secara langsung.
 
 ### 6.2 Inheritance
 
-Program memiliki satu superclass (`Satwa`) dan dua subclass (`Mamalia`, `Reptil`):
+Program memiliki satu superclass (Satwa) dan dua subclass (Mamalia, Reptil):
 
 ```
 Satwa (abstract)
@@ -241,7 +285,10 @@ public class Mamalia extends Satwa implements Perawatan {
 
 `Mamalia` dan `Reptil` mewarisi `Satwa` menggunakan `extends`, sehingga keduanya otomatis memiliki atribut `id`, `nama`, `jenis`, beserta getter dan setter-nya. `super(id, nama, jenis)` dipakai untuk memanggil constructor `Satwa`, sedangkan atribut khusus diisi oleh constructor subclass itu sendiri.
 
-**[GAMBAR 9 – Struktur Package Model]**
+**GAMBAR 9 - Struktur Package Model**
+
+<img width="152" height="93" alt="image" src="https://github.com/user-attachments/assets/5361ef25-19fd-4106-b4d4-c94550019b01" />
+
 
 ---
 
@@ -249,10 +296,10 @@ public class Mamalia extends Satwa implements Perawatan {
 
 ### 7.1 Overriding
 
-Method `tampilkanInfo()` bersifat abstract di `Satwa` (lihat bagian 8), dan **diisi ulang (di-override)** di tiap subclass dengan isi berbeda:
+Method tampilkanInfo() bersifat abstract di Satwa (lihat bagian 8), dan **diisi ulang (di-override)** di tiap subclass dengan isi berbeda:
 
 ```java
-// Mamalia.java
+
 @Override
 public void tampilkanInfo() {
     System.out.println(">> ID Satwa: " + getId());
@@ -264,7 +311,7 @@ public void tampilkanInfo() {
 ```
 
 ```java
-// Reptil.java
+
 @Override
 public void tampilkanInfo() {
     System.out.println(">> ID Satwa: " + getId());
@@ -275,7 +322,7 @@ public void tampilkanInfo() {
 }
 ```
 
-Perilaku polymorphism terlihat jelas pada method `tampilkanSatwa()` di `SatwaCRUD`:
+Perilaku polymorphism terlihat jelas pada method tampilkanSatwa() di SatwaCRUD:
 
 ```java
 for (Satwa satwa : daftarSatwa) {
@@ -283,46 +330,54 @@ for (Satwa satwa : daftarSatwa) {
 }
 ```
 
-ArrayList bertipe `Satwa` menyimpan objek `Mamalia` dan `Reptil` sekaligus. Meskipun perintah yang dipanggil sama (`satwa.tampilkanInfo()`), Java otomatis memanggil versi method milik class objek yang sebenarnya, sehingga hasil tampilannya berbeda-beda.
+ArrayList bertipe Satwa menyimpan objek Mamalia dan Reptil sekaligus. Meskipun perintah yang dipanggil sama (satwa.tampilkanInfo()), Java otomatis memanggil versi method milik class objek yang sebenarnya, sehingga hasil tampilannya berbeda-beda.
 
-**[GAMBAR 10 – Hasil Overriding tampilkanInfo() pada Mamalia dan Reptil]**
+**GAMBAR 10 - Hasil Overriding tampilkanInfo() pada Mamalia dan Reptil**
+
+<img width="597" height="488" alt="image" src="https://github.com/user-attachments/assets/11bbf3ba-e281-4b53-af07-e2da2bf0e90d" />
+
 
 ### 7.2 Overloading
 
-Ditambahkan method **baru** di `Satwa`, dengan nama sama (`tampilkanInfo`) tetapi parameter berbeda:
+Overloading diterapkan pada method tampilkanRingkas() di class Satwa. Terdapat dua method dengan nama yang sama tetapi memiliki parameter yang berbeda
 
 ```java
-public void tampilkanInfo(String catatan) {
-    tampilkanInfo();
-    System.out.println(">> Catatan: " + catatan);
+public void tampilkanRingkas() {
+    System.out.println(">> [" + id + "] " + nama + " - " + jenis);
+}
+
+public void tampilkanRingkas(String catatan) {
+    System.out.println(">> [" + id + "] " + nama + " - " + jenis + " (" + catatan + ")");
 }
 ```
 
-Method ini memanggil `tampilkanInfo()` tanpa parameter terlebih dahulu (yang otomatis memanggil versi override milik objek sebenarnya), lalu menambahkan baris catatan. Dipakai di `SatwaCRUD.tambahSatwa()`, setelah data baru berhasil ditambahkan:
+Method tampilkanRingkas() digunakan untuk menampilkan informasi singkat satwa, sedangkan tampilkanRingkas(String catatan) digunakan untuk menampilkan informasi singkat dengan tambahan catatan.
+
+Pada SatwaCRUD, method tampilkanRingkas(String catatan) digunakan dalam tampilkanPerawatan():
 
 ```java
-daftarSatwa.add(satwaBaru);
-System.out.println(">> Mantap Boss, data satwa berhasil ditambahkan!");
+for (Satwa satwa : daftarSatwa) {
 
-satwaBaru.tampilkanInfo("Data baru saja ditambahkan ke sistem");
+    satwa.tampilkanRingkas("Perlu perawatan rutin");
+
+    if (satwa instanceof Perawatan) {
+        Perawatan p = (Perawatan) satwa;
+        System.out.println(">> Perawatan: " + p.jenisPerawatan());
+    }
+
+    System.out.println(">> -------------------------");
+}
 ```
 
-**[GAMBAR 11 – Hasil Overloading tampilkanInfo(String)]**
+**Gambar 11 - Hasil Overloading tampilkanRingkas() pada Informasi Perawatan Satwa**
 
-### 7.3 Ringkasan
-
-| | Overriding | Overloading |
-|---|---|---|
-| Nama method | Sama (`tampilkanInfo`) | Sama (`tampilkanInfo`) |
-| Parameter | Sama persis (tanpa parameter) | Berbeda (ditambah 1 parameter `String`) |
-| Lokasi | Antar class berbeda (superclass ke subclass) | Dalam 1 class yang sama (`Satwa`) |
-| Tujuan | Subclass punya cara tampil sendiri | Satu nama method dipakai dengan cara berbeda |
+<img width="633" height="150" alt="image" src="https://github.com/user-attachments/assets/86e0f18e-09de-4d34-954b-9f60f1c8ff64" />
 
 ---
 
 ## 8. Abstraction
 
-**Class yang menjadi abstract class:** `Satwa`.
+**Class yang menjadi abstract class:** Satw.
 
 ```java
 public abstract class Satwa {
@@ -330,25 +385,28 @@ public abstract class Satwa {
 }
 ```
 
-Karena `Satwa` bersifat abstrak, class ini **tidak bisa dibuat objeknya secara langsung** (`new Satwa(...)` tidak diperbolehkan). Hanya `Mamalia` dan `Reptil` yang bisa dibuat objeknya, sehingga setiap data satwa yang dibuat pasti jelas jenisnya.
+Karena Satwa bersifat abstrak, class ini tidak bisa dibuat objeknya secara langsung (new Satwa(...) tidak diperbolehkan). Hanya Mamalia dan Reptil yang bisa dibuat objeknya, sehingga setiap data satwa yang dibuat pasti jelas jenisnya.
 
-**Abstract method yang digunakan:** `tampilkanInfo()`.
+**Abstract method yang digunakan:** tampilkanInfo().
 
 ```java
 public abstract void tampilkanInfo();
 ```
 
-Method ini tidak memiliki isi di `Satwa`, sehingga setiap subclass **wajib** mengisinya sendiri (lihat bagian 7.1 untuk implementasinya di `Mamalia` dan `Reptil`).
+Method ini tidak memiliki isi di Satwa, sehingga setiap subclass wajib mengisinya sendiri (lihat bagian 7.1 untuk implementasinya di Mamalia dan Reptil).
 
 **Tujuan penggunaan abstraction:** memastikan setiap satwa yang dibuat pasti punya jenis yang jelas (karena `Satwa` tidak bisa berdiri sendiri), sekaligus memaksa setiap subclass untuk menyediakan cara tampilnya masing-masing.
 
-**[GAMBAR 12 – Penerapan Abstract Class dan Abstract Method]**
+**GAMBAR 12 - Penerapan Abstract Class dan Abstract Method**
+
+<img width="612" height="645" alt="image" src="https://github.com/user-attachments/assets/f37e75f9-022e-4ee0-b6a5-a8137f3c2f8e" />
+
 
 ---
 
-## 9. Nilai Tambah: Interface
+## 9. Interface
 
-**Nama interface:** `Perawatan`.
+**Nama interface:** Perawatan.
 
 ```java
 public interface Perawatan {
@@ -361,9 +419,8 @@ public interface Perawatan {
 **Class yang mengimplementasikan interface:** `Mamalia` dan `Reptil`, masing-masing dengan isi berbeda:
 
 ```java
-// Mamalia.java
 public class Mamalia extends Satwa implements Perawatan {
-    // ...
+
     @Override
     public String jenisPerawatan() {
         return "Pemberian pakan harian dan pemeriksaan kesehatan rutin";
@@ -372,9 +429,7 @@ public class Mamalia extends Satwa implements Perawatan {
 ```
 
 ```java
-// Reptil.java
 public class Reptil extends Satwa implements Perawatan {
-    // ...
     @Override
     public String jenisPerawatan() {
         return "Pengaturan suhu kandang dan pemeriksaan kondisi kulit";
@@ -412,7 +467,10 @@ public void tampilkanPerawatan() {
 
 Operator `instanceof` dipakai untuk memastikan objek satwa benar-benar mengimplementasikan `Perawatan` sebelum di-cast dan dipanggil method-nya.
 
-**[GAMBAR 13 – Hasil Menu Lihat Perawatan Satwa]**
+**GAMBAR 13 - Hasil Menu Lihat Perawatan Satwa**
+
+<img width="612" height="190" alt="image" src="https://github.com/user-attachments/assets/6355fc1f-aed9-472a-87fe-0f8a9860d139" />
+
 
 ---
 
@@ -431,7 +489,10 @@ public SatwaCRUD() {
 
 Dummy data yang digunakan adalah Orangutan sebagai Mamalia (habitat Hutan), dan Komodo sebagai Reptil (tidak berbisa).
 
-**[GAMBAR 14 – Tampilan Data Dummy]**
+**GAMBAR 14 - Tampilan Data Dummy**
+
+<img width="410" height="353" alt="image" src="https://github.com/user-attachments/assets/1439050b-e95e-4341-bfff-f6418c907ff0" />
+
 
 ---
 
