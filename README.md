@@ -5,20 +5,13 @@
 
 </div>
 
-## Identitas Mahasiswa
-
-- **Nama:** [Isi Nama]
-- **NIM:** [Isi NIM]
-- **Kelas:** [Isi Kelas]
-- **Program Studi:** [Isi Program Studi]
-
 ---
 
 ## 1. Latar Belakang
 
 Satwa dilindungi di Indonesia, seperti Orangutan dan Komodo, perlu didata dan dipantau agar keberadaannya tetap terjaga. Pencatatan yang dilakukan secara manual rentan salah atau tercatat ganda. Oleh karena itu, dibuat program sederhana berbasis Java untuk membantu mencatat dan memantau data satwa dilindungi.
 
-Program ini merupakan pengembangan bertahap: dimulai dari Mini Project 1, dikembangkan lagi di Mini Project 2 dengan penerapan encapsulation, inheritance, polymorphism (overriding), ArrayList, dan struktur MVC, dan sekarang dikembangkan lebih lanjut di **Mini Project 3** ini dengan menambahkan **abstraction**, **polymorphism overloading**, dan **interface** sebagai nilai tambah.
+Program ini merupakan pengembangan bertahap: dimulai dari Mini Project 1, dikembangkan lagi di Mini Project 2 dengan penerapan encapsulation, inheritance, polymorphism (overriding), ArrayList, dan struktur MVC, dan sekarang dikembangkan lebih lanjut di **Mini Project 3** ini dengan menambahkan **abstraction**, **polymorphism overloading**, dan **interface**
 
 ## 2. Deskripsi Program
 
@@ -26,13 +19,14 @@ Program ini merupakan aplikasi berbasis konsol (Command Line Interface) yang dig
 
 Program menyediakan lima fitur utama:
 
-- **Tambah Satwa** – menambahkan data satwa baru.
-- **Tampilkan Satwa** – menampilkan seluruh data satwa yang tersimpan.
-- **Update Satwa** – mengubah nama satwa berdasarkan ID.
-- **Hapus Satwa** – menghapus data satwa berdasarkan ID.
-- **Lihat Perawatan Satwa** *(baru di Mini Project 3)* – menampilkan informasi perawatan tiap satwa, memanfaatkan interface.
+- **Tambah Satwa** - menambahkan data satwa baru.
+- **Tampilkan Satwa** - menampilkan seluruh data satwa yang tersimpan.
+- **Update Satwa** - mengubah nama satwa berdasarkan ID.
+- **Hapus Satwa** - menghapus data satwa berdasarkan ID.
+- **Lihat Perawatan Satwa** - menampilkan informasi perawatan tiap satwa, memanfaatkan interface.
 
-**[GAMBAR 1 – Tampilan Menu Utama]**
+**GAMBAR 1 - Tampilan Menu Utama**
+<img width="632" height="392" alt="image" src="https://github.com/user-attachments/assets/19e97bc1-78e2-4a08-8f12-a74bd003f3d3" />
 
 ---
 
@@ -49,14 +43,15 @@ Source Packages
 │   └── SatwaCek.java         (validasi input)
 ├── Model
 │   ├── Satwa.java            (abstract class / superclass)
-│   ├── Perawatan.java        (interface — nilai tambah)
+│   ├── Perawatan.java        (interface - nilai tambah)
 │   ├── Mamalia.java          (subclass)
 │   └── Reptil.java           (subclass)
 └── View
     └── Menu.java             (tampilan menu)
 ```
 
-**[GAMBAR 2 – Struktur Package di NetBeans]**
+**GAMBAR 2 – Struktur Package di NetBeans**
+<img width="357" height="252" alt="image" src="https://github.com/user-attachments/assets/a1041e14-40f5-476d-8905-7332a86e6230" />
 
 ### Pembagian MVC
 
